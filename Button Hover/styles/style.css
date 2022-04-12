@@ -321,9 +321,9 @@ section {
 
 .btn-5 {
   position: relative;
-  border: 1px solid black;
+  border: 1px solid #CAB5F4;
   background-color: transparent;
-  color: black;
+  color: #CAB5F4;
   overflow: hidden;
 }
 
