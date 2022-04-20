@@ -22,6 +22,16 @@
           box-shadow: 0px 0px 15px 0px #F5DEF5;
 }
 
+.hover1 .title-bg {
+  font-size: 46px;
+  background-image: url("../assets/img/bg-text.PNG");
+  background-size: cover;
+  background-clip: text;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .hover1 .person {
   -webkit-box-align: center;
       -ms-flex-align: center;
