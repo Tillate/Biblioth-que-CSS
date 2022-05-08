@@ -811,6 +811,92 @@ section {
   }
 }
 
+@-webkit-keyframes bump {
+  0% {
+    -webkit-box-shadow: 0 2em 0 -.2em #121212;
+            box-shadow: 0 2em 0 -.2em #121212;
+  }
+  100% {
+    -webkit-box-shadow: 0 1em 0 -.2em #121212;
+            box-shadow: 0 1em 0 -.2em #121212;
+  }
+}
+
+@keyframes bump {
+  0% {
+    -webkit-box-shadow: 0 2em 0 -.2em #121212;
+            box-shadow: 0 2em 0 -.2em #121212;
+  }
+  100% {
+    -webkit-box-shadow: 0 1em 0 -.2em #121212;
+            box-shadow: 0 1em 0 -.2em #121212;
+  }
+}
+
+@-webkit-keyframes dotrotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes dotrotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dotscale {
+  0%, 10% {
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-top: -4px;
+  }
+  50% {
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+    margin-top: 0;
+  }
+  90%, 100% {
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-top: -4px;
+  }
+}
+
+@keyframes dotscale {
+  0%, 10% {
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-top: -4px;
+  }
+  50% {
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+    margin-top: 0;
+  }
+  90%, 100% {
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-top: -4px;
+  }
+}
+
 .section-5 h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -823,7 +909,10 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 100px;
 }
 
 .section-5 .loader {
@@ -844,5 +933,61 @@ section {
   background: #121212;
   -webkit-animation: pulse 1s infinite linear;
           animation: pulse 1s infinite linear;
+}
+
+.section-5 .loader3 {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.section-5 .loader3 .dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: 1.7s dotrotate cubic-bezier(0.775, 0.005, 0.31, 1) infinite;
+          animation: 1.7s dotrotate cubic-bezier(0.775, 0.005, 0.31, 1) infinite;
+}
+
+.section-5 .loader3 .dot:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.section-5 .loader3 .dot:nth-child(2) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+.section-5 .loader3 .dot:nth-child(3) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+.section-5 .loader3 .dot:nth-child(4) {
+  -webkit-animation-delay: 0.55s;
+          animation-delay: 0.55s;
+}
+
+.section-5 .loader3 .dot:after, .section-5 .loader3 .dot .first {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #121212;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.section-5 .loader3 .dot .first {
+  background: #121212;
+  margin-top: -4px;
+  -webkit-animation: 1.7s dotscale cubic-bezier(0.775, 0.005, 0.31, 1) infinite;
+          animation: 1.7s dotscale cubic-bezier(0.775, 0.005, 0.31, 1) infinite;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 /*# sourceMappingURL=style.css.map */
